@@ -1,0 +1,9 @@
+class functionCal:
+    def add(seft,a,b):
+        return str(int(a)+int(b))
+    def Subtract(seft,a,b):
+        return str(int(a)-int(b))
+    def Multiply(seft,a,b):
+        return str(int(a)*int(b))
+    def Divide(seft,a,b):
+        return str(int(a)/int(b))

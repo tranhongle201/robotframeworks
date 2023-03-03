@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.0.2 (Python 3.11.2 on win32)" generated="20230302 16:29:13.646" rpa="false" schemaversion="3">
+<suite id="s1" name="Add New Product" source="D:\Project\Robot-Framwork\RobotFrameworkProject\testcase_ui\02_Add_ product\add_new_product.robot">
+<test id="s1-t1" name="TC03_ADD_NEW_PRODUCT: Add new product and save product" line="30">
+<kw name="Start testcases" library="ui_common_keywords" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230302 16:29:14.053" level="INFO">Opening browser 'Chrome' to base url 'https://admin-demo.nopcommerce.com/login?ReturnUrl=%2Fadmin%2F'.</msg>
+<status status="PASS" starttime="20230302 16:29:14.053" endtime="20230302 16:29:40.498"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20230302 16:29:40.498" endtime="20230302 16:29:40.613"/>
+</kw>
+<status status="PASS" starttime="20230302 16:29:14.051" endtime="20230302 16:29:40.613"/>
+</kw>
+<kw name="Given Navigate to add new product" library="add_new_product">
+<kw name="Given Login Page" library="add_new_product">
+<arg>admin@yourstore.com</arg>
+<arg>admin</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${LOGIN.EMAIL}</arg>
+<arg>${email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230302 16:29:40.615" level="INFO">Typing text 'admin@yourstore.com' into text field '//input[@id="Email"]'.</msg>
+<status status="PASS" starttime="20230302 16:29:40.615" endtime="20230302 16:29:40.737"/>
+</kw>
+<kw name="Input Password" library="SeleniumLibrary">
+<arg>${LOGIN.PASSWORD}</arg>
+<arg>${password}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<msg timestamp="20230302 16:29:40.737" level="INFO">Typing password into text field '//input[@class="password"]'.</msg>
+<msg timestamp="20230302 16:29:40.781" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20230302 16:29:40.824" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20230302 16:29:40.737" endtime="20230302 16:29:40.824"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${LOGIN.REMEMBER_ME}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230302 16:29:40.825" level="INFO">Clicking element '//input[@id="RememberMe"]'.</msg>
+<status status="PASS" starttime="20230302 16:29:40.824" endtime="20230302 16:29:40.871"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${LOGIN.BUTTON_LOGIN}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20230302 16:29:40.872" level="INFO">Clicking button '//button[@type="submit"]'.</msg>
+<status status="PASS" starttime="20230302 16:29:40.871" endtime="20230302 16:29:45.281"/>
+</kw>
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>Dashboard / nopCommerce administration</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20230302 16:29:45.287" level="INFO">Page title is 'Dashboard / nopCommerce administration'.</msg>
+<status status="PASS" starttime="20230302 16:29:45.281" endtime="20230302 16:29:45.287"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230302 16:29:50.288" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20230302 16:29:45.287" endtime="20230302 16:29:50.288"/>
+</kw>
+<status status="PASS" starttime="20230302 16:29:40.614" endtime="20230302 16:29:50.288"/>
+</kw>
+<kw name="And Navigate to Catelog" library="add_new_product">
+<kw name="Click Link" library="SeleniumLibrary">
+<arg>${DASHBOARD.CATEGOG}</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<msg timestamp="20230302 16:29:50.289" level="INFO">Clicking link '//p[text()[normalize-space()='Catalog']]/..'.</msg>
+<status status="PASS" starttime="20230302 16:29:50.288" endtime="20230302 16:29:50.360"/>
+</kw>
+<status status="PASS" starttime="20230302 16:29:50.288" endtime="20230302 16:29:50.360"/>
+</kw>
+<kw name="And Navigate to Products" library="add_new_product">
+<kw name="Click Link" library="SeleniumLibrary">
+<arg>${DASHBOARD.PRODUCTS}</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<msg timestamp="20230302 16:29:50.361" level="INFO">Clicking link '//p[text()=' Products']/..'.</msg>
+<status status="PASS" starttime="20230302 16:29:50.361" endtime="20230302 16:29:51.882"/>
+</kw>
+<status status="PASS" starttime="20230302 16:29:50.360" endtime="20230302 16:29:51.882"/>
+</kw>
+<kw name="When Click add new product" library="add_new_product">
+<kw name="Click Link" library="SeleniumLibrary">
+<arg>${PRODUCT.ADD_NEW_BUTTON}</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<msg timestamp="20230302 16:29:51.883" level="INFO">Clicking link '//div[@class='float-right']/a'.</msg>
+<status status="PASS" starttime="20230302 16:29:51.883" endtime="20230302 16:29:54.247"/>
+</kw>
+<status status="PASS" starttime="20230302 16:29:51.883" endtime="20230302 16:29:54.247"/>
+</kw>
+<status status="PASS" starttime="20230302 16:29:40.614" endtime="20230302 16:29:54.247"/>
+</kw>
+<kw name="And Should be navigate to add new product" library="add_new_product">
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>Add a new product / nopCommerce administration</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20230302 16:29:54.293" level="INFO">Page title is 'Add a new product / nopCommerce administration'.</msg>
+<status status="PASS" starttime="20230302 16:29:54.248" endtime="20230302 16:29:54.293"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230302 16:29:59.293" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20230302 16:29:54.293" endtime="20230302 16:29:59.293"/>
+</kw>
+<status status="PASS" starttime="20230302 16:29:54.248" endtime="20230302 16:29:59.293"/>
+</kw>
+<kw name="And Input textfield" library="add_new_product">
+<arg>Name</arg>
+<arg>input name</arg>
+<kw name="Replace String" library="String">
+<var>${ADD_NEW_PRODUCT.PRODUCT_NAME}</var>
+<arg>${ADD_NEW_PRODUCT.PRODUCT_NAME}</arg>
+<arg>_Name_</arg>
+<arg>${field}</arg>
+<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
+<msg timestamp="20230302 16:29:59.296" level="INFO">${ADD_NEW_PRODUCT.PRODUCT_NAME} = //input[@id='Name']</msg>
+<status status="PASS" starttime="20230302 16:29:59.294" endtime="20230302 16:29:59.296"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${ADD_NEW_PRODUCT.PRODUCT_NAME}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20230302 16:29:59.327" level="INFO">Element '//input[@id='Name']' is displayed.</msg>
+<status status="PASS" starttime="20230302 16:29:59.296" endtime="20230302 16:29:59.327"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${ADD_NEW_PRODUCT.PRODUCT_NAME}</arg>
+<arg>${value}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230302 16:29:59.327" level="INFO">Typing text 'input name' into text field '//input[@id='Name']'.</msg>
+<status status="PASS" starttime="20230302 16:29:59.327" endtime="20230302 16:29:59.449"/>
+</kw>
+<status status="PASS" starttime="20230302 16:29:59.294" endtime="20230302 16:29:59.449"/>
+</kw>
+<kw name="And Input short description" library="add_new_product">
+<arg>short description</arg>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${ADD_NEW_PRODUCT.SHORT_DESCRIPTION}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20230302 16:29:59.480" level="INFO">Element '//textarea[@id='ShortDescription']' is displayed.</msg>
+<status status="PASS" starttime="20230302 16:29:59.450" endtime="20230302 16:29:59.480"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${ADD_NEW_PRODUCT.SHORT_DESCRIPTION}</arg>
+<arg>${short_description}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230302 16:29:59.481" level="INFO">Typing text 'short description' into text field '//textarea[@id='ShortDescription']'.</msg>
+<status status="PASS" starttime="20230302 16:29:59.480" endtime="20230302 16:29:59.615"/>
+</kw>
+<status status="PASS" starttime="20230302 16:29:59.450" endtime="20230302 16:29:59.615"/>
+</kw>
+<kw name="And Input Full description" library="add_new_product">
+<arg>111</arg>
+<kw name="Select Frame" library="SeleniumLibrary">
+<arg>${ADD_NEW_PRODUCT.IFRAME}</arg>
+<doc>Sets frame identified by ``locator`` as the current frame.</doc>
+<msg timestamp="20230302 16:29:59.617" level="INFO">Selecting frame '//iframe[@id='FullDescription_ifr']'.</msg>
+<status status="PASS" starttime="20230302 16:29:59.617" endtime="20230302 16:29:59.649"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${ADD_NEW_PRODUCT.FULL_DESCRIPTION}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20230302 16:29:59.678" level="INFO">Element '//body[@data-id='FullDescription']/p' is displayed.</msg>
+<status status="PASS" starttime="20230302 16:29:59.649" endtime="20230302 16:29:59.678"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${ADD_NEW_PRODUCT.FULL_DESCRIPTION}</arg>
+<arg>${Full_description}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230302 16:29:59.678" level="INFO">Typing text '111' into text field '//body[@data-id='FullDescription']/p'.</msg>
+<status status="PASS" starttime="20230302 16:29:59.678" endtime="20230302 16:29:59.776"/>
+</kw>
+<status status="PASS" starttime="20230302 16:29:59.616" endtime="20230302 16:29:59.776"/>
+</kw>
+<kw name="And select value dropdown Categories" library="add_new_product">
+<arg>Computers</arg>
+<kw name="Select From List By Value" library="SeleniumLibrary">
+<arg>${ADD_NEW_PRODUCT.DROPDOWN_LIST_CATEGORIES}</arg>
+<arg>${Categories}</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<msg timestamp="20230302 16:29:59.778" level="INFO">Selecting options from selection list '//select[@id='SelectedCategoryIds']' by value Computers.</msg>
+<msg timestamp="20230302 16:29:59.991" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-8.png"&gt;&lt;img src="selenium-screenshot-8.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20230302 16:29:59.991" level="FAIL">List with locator '//select[@id='SelectedCategoryIds']' not found.</msg>
+<status status="FAIL" starttime="20230302 16:29:59.777" endtime="20230302 16:30:00.015"/>
+</kw>
+<kw name="List Selection Should Be" library="SeleniumLibrary">
+<arg>${ADD_NEW_PRODUCT.DROPDOWN_LIST_CATEGORIES}</arg>
+<arg>${Categories}</arg>
+<doc>Verifies selection list ``locator`` has ``expected`` options selected.</doc>
+<status status="NOT RUN" starttime="20230302 16:30:00.015" endtime="20230302 16:30:00.015"/>
+</kw>
+<status status="FAIL" starttime="20230302 16:29:59.777" endtime="20230302 16:30:00.015"/>
+</kw>
+<kw name="And select value dropdown Manufacturers" library="add_new_product">
+<arg>HP</arg>
+<status status="NOT RUN" starttime="20230302 16:30:00.020" endtime="20230302 16:30:00.020"/>
+</kw>
+<doc>As an admin, I can add a new product and save it</doc>
+<tag>ADD_NEW_PRODUCT1</tag>
+<tag>loginPage</tag>
+<status status="FAIL" starttime="20230302 16:29:14.050" endtime="20230302 16:30:00.021">List with locator '//select[@id='SelectedCategoryIds']' not found.</status>
+</test>
+<status status="FAIL" starttime="20230302 16:29:13.648" endtime="20230302 16:30:00.027"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="0" fail="1" skip="0">ADD_NEW_PRODUCT1</stat>
+<stat pass="0" fail="1" skip="0">loginPage</stat>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="Add New Product">Add New Product</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20230302 16:29:14.010" level="ERROR">Error in file 'D:\Project\Robot-Framwork\RobotFrameworkProject\testcase_ui\02_Add_ product\add_new_product.resource' on line 4: Importing library 'RPA.Windows' failed: ModuleNotFoundError: No module named 'RPA'
+Traceback (most recent call last):
+  None
+PYTHONPATH:
+  C:\Program Files\Python311\Scripts\robot.exe
+  C:\Program Files\Python311\python311.zip
+  C:\Program Files\Python311\DLLs
+  C:\Program Files\Python311\Lib
+  C:\Program Files\Python311
+  C:\Users\thongle\AppData\Roaming\Python\Python311\site-packages
+  C:\Program Files\Python311\Lib\site-packages</msg>
+<msg timestamp="20230302 16:29:14.042" level="ERROR">Error in file 'D:\Project\Robot-Framwork\RobotFrameworkProject\common_ui\ui_common_keywords.resource' on line 3: Importing library 'RPA.Windows' failed: ModuleNotFoundError: No module named 'RPA'
+Traceback (most recent call last):
+  None
+PYTHONPATH:
+  C:\Program Files\Python311\Scripts\robot.exe
+  C:\Program Files\Python311\python311.zip
+  C:\Program Files\Python311\DLLs
+  C:\Program Files\Python311\Lib
+  C:\Program Files\Python311
+  C:\Users\thongle\AppData\Roaming\Python\Python311\site-packages
+  C:\Program Files\Python311\Lib\site-packages</msg>
+</errors>
+</robot>
