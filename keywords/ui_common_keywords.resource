@@ -1,7 +1,7 @@
 *** Settings ***
 Library           SeleniumLibrary
-Library    RPA.Windows
-Resource     ./pages_object/add_new_product.resource
+Resource     ../keywords/ui_common_keywords.resource
+Resource     ../locators/add_new_product.resource
 *** Variables ***
 ${URL}    https://ecommerce-playground.lambdatest.io/index.php?route=account/login
 ${BROWSER}        Chrome
