@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 6.0.2 (Python 3.11.2 on win32)" generated="20230306 15:18:29.092" rpa="false" schemaversion="3">
+<robot generator="Robot 6.0.2 (Python 3.11.2 on win32)" generated="20230307 09:54:58.265" rpa="false" schemaversion="3">
 <suite id="s1" name="Add New Product" source="D:\Project\Robot-Framwork\RobotFrameworkProject\testcase_ui\02_Add_ product\add_new_product.robot">
-<test id="s1-t1" name="TC03_ADD_NEW_PRODUCT: Add new product and save product" line="28">
+<test id="s1-t1" name="TC03_ADD_NEW_PRODUCT: Add new product and save product" line="56">
 <kw name="Start testcases" library="ui_common_keywords" type="SETUP">
 <kw name="Open Browser" library="SeleniumLibrary">
 <arg>${URL}</arg>
 <arg>${BROWSER}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20230306 15:18:29.635" level="INFO">Opening browser 'Chrome' to base url 'https://admin-demo.nopcommerce.com/login?ReturnUrl=%2Fadmin%2F'.</msg>
-<status status="PASS" starttime="20230306 15:18:29.635" endtime="20230306 15:18:56.001"/>
+<msg timestamp="20230307 09:54:58.727" level="INFO">Opening browser 'Chrome' to base url 'https://admin-demo.nopcommerce.com/login?ReturnUrl=%2Fadmin%2F'.</msg>
+<status status="PASS" starttime="20230307 09:54:58.727" endtime="20230307 09:55:02.944"/>
 </kw>
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20230306 15:18:56.001" endtime="20230306 15:18:56.135"/>
+<status status="PASS" starttime="20230307 09:55:02.944" endtime="20230307 09:55:03.069"/>
 </kw>
-<status status="PASS" starttime="20230306 15:18:29.634" endtime="20230306 15:18:56.135"/>
+<status status="PASS" starttime="20230307 09:54:58.716" endtime="20230307 09:55:03.069"/>
 </kw>
 <kw name="Given Navigate to add new product" library="add_new_product_keywords">
 <kw name="Given Login Page" library="add_new_product_keywords">
@@ -24,326 +24,248 @@
 <arg>${LOGIN.EMAIL}</arg>
 <arg>${email}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20230306 15:18:56.137" level="INFO">Typing text 'admin@yourstore.com' into text field '//input[@id="Email"]'.</msg>
-<status status="PASS" starttime="20230306 15:18:56.137" endtime="20230306 15:18:56.249"/>
+<msg timestamp="20230307 09:55:03.071" level="INFO">Typing text 'admin@yourstore.com' into text field '//input[@id="Email"]'.</msg>
+<status status="PASS" starttime="20230307 09:55:03.071" endtime="20230307 09:55:03.194"/>
 </kw>
 <kw name="Input Password" library="SeleniumLibrary">
 <arg>${LOGIN.PASSWORD}</arg>
 <arg>${password}</arg>
 <doc>Types the given password into the text field identified by ``locator``.</doc>
-<msg timestamp="20230306 15:18:56.250" level="INFO">Typing password into text field '//input[@class="password"]'.</msg>
-<msg timestamp="20230306 15:18:56.293" level="INFO">Temporally setting log level to: NONE</msg>
-<msg timestamp="20230306 15:18:56.328" level="INFO">Log level changed from NONE to INFO.</msg>
-<status status="PASS" starttime="20230306 15:18:56.249" endtime="20230306 15:18:56.328"/>
+<msg timestamp="20230307 09:55:03.195" level="INFO">Typing password into text field '//input[@class="password"]'.</msg>
+<msg timestamp="20230307 09:55:03.240" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20230307 09:55:03.281" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20230307 09:55:03.194" endtime="20230307 09:55:03.282"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>${LOGIN.REMEMBER_ME}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20230306 15:18:56.329" level="INFO">Clicking element '//input[@id="RememberMe"]'.</msg>
-<status status="PASS" starttime="20230306 15:18:56.328" endtime="20230306 15:18:56.374"/>
+<msg timestamp="20230307 09:55:03.282" level="INFO">Clicking element '//input[@id="RememberMe"]'.</msg>
+<status status="PASS" starttime="20230307 09:55:03.282" endtime="20230307 09:55:03.328"/>
 </kw>
 <kw name="Click Button" library="SeleniumLibrary">
 <arg>${LOGIN.BUTTON_LOGIN}</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20230306 15:18:56.374" level="INFO">Clicking button '//button[@type="submit"]'.</msg>
-<status status="PASS" starttime="20230306 15:18:56.374" endtime="20230306 15:18:59.955"/>
+<msg timestamp="20230307 09:55:03.328" level="INFO">Clicking button '//button[@type="submit"]'.</msg>
+<status status="PASS" starttime="20230307 09:55:03.328" endtime="20230307 09:55:05.763"/>
 </kw>
 <kw name="Title Should Be" library="SeleniumLibrary">
 <arg>Dashboard / nopCommerce administration</arg>
 <doc>Verifies that the current page title equals ``title``.</doc>
-<msg timestamp="20230306 15:18:59.967" level="INFO">Page title is 'Dashboard / nopCommerce administration'.</msg>
-<status status="PASS" starttime="20230306 15:18:59.955" endtime="20230306 15:18:59.967"/>
+<msg timestamp="20230307 09:55:05.771" level="INFO">Page title is 'Dashboard / nopCommerce administration'.</msg>
+<status status="PASS" starttime="20230307 09:55:05.763" endtime="20230307 09:55:05.771"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>5s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20230306 15:19:04.967" level="INFO">Slept 5 seconds</msg>
-<status status="PASS" starttime="20230306 15:18:59.967" endtime="20230306 15:19:04.967"/>
+<msg timestamp="20230307 09:55:10.772" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20230307 09:55:05.771" endtime="20230307 09:55:10.772"/>
 </kw>
-<status status="PASS" starttime="20230306 15:18:56.136" endtime="20230306 15:19:04.967"/>
+<status status="PASS" starttime="20230307 09:55:03.071" endtime="20230307 09:55:10.772"/>
 </kw>
 <kw name="And Navigate to Catelog" library="add_new_product_keywords">
 <kw name="Click Link" library="SeleniumLibrary">
 <arg>${DASHBOARD.CATEGOG}</arg>
 <doc>Clicks a link identified by ``locator``.</doc>
-<msg timestamp="20230306 15:19:04.968" level="INFO">Clicking link '//p[text()[normalize-space()='Catalog']]/..'.</msg>
-<status status="PASS" starttime="20230306 15:19:04.967" endtime="20230306 15:19:05.039"/>
+<msg timestamp="20230307 09:55:10.773" level="INFO">Clicking link '//p[text()[normalize-space()='Catalog']]/..'.</msg>
+<status status="PASS" starttime="20230307 09:55:10.772" endtime="20230307 09:55:10.840"/>
 </kw>
-<status status="PASS" starttime="20230306 15:19:04.967" endtime="20230306 15:19:05.040"/>
+<status status="PASS" starttime="20230307 09:55:10.772" endtime="20230307 09:55:10.841"/>
 </kw>
 <kw name="And Navigate to Products" library="add_new_product_keywords">
 <kw name="Click Link" library="SeleniumLibrary">
 <arg>${DASHBOARD.PRODUCTS}</arg>
 <doc>Clicks a link identified by ``locator``.</doc>
-<msg timestamp="20230306 15:19:05.040" level="INFO">Clicking link '//p[text()=' Products']/..'.</msg>
-<status status="PASS" starttime="20230306 15:19:05.040" endtime="20230306 15:19:06.530"/>
+<msg timestamp="20230307 09:55:10.842" level="INFO">Clicking link '//p[text()=' Products']/..'.</msg>
+<status status="PASS" starttime="20230307 09:55:10.841" endtime="20230307 09:55:12.090"/>
 </kw>
-<status status="PASS" starttime="20230306 15:19:05.040" endtime="20230306 15:19:06.531"/>
+<status status="PASS" starttime="20230307 09:55:10.841" endtime="20230307 09:55:12.090"/>
 </kw>
 <kw name="When Click add new product" library="add_new_product_keywords">
 <kw name="Click Link" library="SeleniumLibrary">
 <arg>${PRODUCT.ADD_NEW_BUTTON}</arg>
 <doc>Clicks a link identified by ``locator``.</doc>
-<msg timestamp="20230306 15:19:06.531" level="INFO">Clicking link '//div[@class='float-right']/a'.</msg>
-<status status="PASS" starttime="20230306 15:19:06.531" endtime="20230306 15:19:09.276"/>
+<msg timestamp="20230307 09:55:12.091" level="INFO">Clicking link '//div[@class='float-right']/a'.</msg>
+<status status="PASS" starttime="20230307 09:55:12.090" endtime="20230307 09:55:14.102"/>
 </kw>
-<status status="PASS" starttime="20230306 15:19:06.531" endtime="20230306 15:19:09.276"/>
+<status status="PASS" starttime="20230307 09:55:12.090" endtime="20230307 09:55:14.102"/>
 </kw>
-<status status="PASS" starttime="20230306 15:18:56.136" endtime="20230306 15:19:09.276"/>
+<status status="PASS" starttime="20230307 09:55:03.070" endtime="20230307 09:55:14.103"/>
 </kw>
 <kw name="And Should be navigate to add new product" library="add_new_product_keywords">
 <kw name="Title Should Be" library="SeleniumLibrary">
 <arg>Add a new product / nopCommerce administration</arg>
 <doc>Verifies that the current page title equals ``title``.</doc>
-<msg timestamp="20230306 15:19:09.319" level="INFO">Page title is 'Add a new product / nopCommerce administration'.</msg>
-<status status="PASS" starttime="20230306 15:19:09.277" endtime="20230306 15:19:09.319"/>
+<msg timestamp="20230307 09:55:14.167" level="INFO">Page title is 'Add a new product / nopCommerce administration'.</msg>
+<status status="PASS" starttime="20230307 09:55:14.103" endtime="20230307 09:55:14.167"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>5s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20230306 15:19:14.320" level="INFO">Slept 5 seconds</msg>
-<status status="PASS" starttime="20230306 15:19:09.320" endtime="20230306 15:19:14.320"/>
+<msg timestamp="20230307 09:55:19.168" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20230307 09:55:14.167" endtime="20230307 09:55:19.168"/>
 </kw>
-<status status="PASS" starttime="20230306 15:19:09.277" endtime="20230306 15:19:14.320"/>
+<status status="PASS" starttime="20230307 09:55:14.103" endtime="20230307 09:55:19.168"/>
 </kw>
-<kw name="And Input textfield" library="add_new_product_keywords">
-<arg>Name</arg>
-<arg>input name</arg>
+<kw name="And Check Visivisibleble and togle Advanced" library="add_new_product_keywords">
 <kw name="Replace String" library="String">
-<var>${ADD_NEW_PRODUCT.PRODUCT_NAME}</var>
-<arg>${ADD_NEW_PRODUCT.PRODUCT_NAME}</arg>
-<arg>_Name_</arg>
-<arg>${field}</arg>
+<var>${ADD_NEW_PRODUCT.SETTING}</var>
+<arg>${ADD_NEW_PRODUCT.BTN_TOGLE}</arg>
+<arg>basic</arg>
+<arg>advanced</arg>
 <doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
-<msg timestamp="20230306 15:19:14.323" level="INFO">${ADD_NEW_PRODUCT.PRODUCT_NAME} = //input[@id='Name']</msg>
-<status status="PASS" starttime="20230306 15:19:14.322" endtime="20230306 15:19:14.323"/>
+<msg timestamp="20230307 09:55:19.171" level="INFO">${ADD_NEW_PRODUCT.SETTING} = //body[contains(@class, 'advanced-settings-mode')]//div[@class='onoffswitch']</msg>
+<status status="PASS" starttime="20230307 09:55:19.170" endtime="20230307 09:55:19.171"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230307 09:55:24.171" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20230307 09:55:19.171" endtime="20230307 09:55:24.171"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${ADD_NEW_PRODUCT.SETTING}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20230307 09:55:24.202" level="INFO">Element '//body[contains(@class, 'advanced-settings-mode')]//div[@class='onoffswitch']' is displayed.</msg>
+<status status="PASS" starttime="20230307 09:55:24.171" endtime="20230307 09:55:24.202"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${ADD_NEW_PRODUCT.SETTING}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230307 09:55:24.203" level="INFO">Clicking element '//body[contains(@class, 'advanced-settings-mode')]//div[@class='onoffswitch']'.</msg>
+<status status="PASS" starttime="20230307 09:55:24.202" endtime="20230307 09:55:24.261"/>
+</kw>
+<status status="PASS" starttime="20230307 09:55:19.169" endtime="20230307 09:55:24.261"/>
+</kw>
+<kw name="When Input text field Product name" library="add_new_product_keywords">
+<arg>product_name_value</arg>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${ADD_NEW_PRODUCT.PRODUCT_NAME}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20230307 09:55:24.307" level="INFO">Element '//input[@id='Name']' is displayed.</msg>
+<status status="PASS" starttime="20230307 09:55:24.262" endtime="20230307 09:55:24.307"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>${ADD_NEW_PRODUCT.PRODUCT_NAME}</arg>
-<arg>${value}</arg>
+<arg>${product_name_value}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20230306 15:19:14.324" level="INFO">Typing text 'input name' into text field '//input[@id='Name']'.</msg>
-<status status="PASS" starttime="20230306 15:19:14.323" endtime="20230306 15:19:14.443"/>
+<msg timestamp="20230307 09:55:24.307" level="INFO">Typing text 'product_name_value' into text field '//input[@id='Name']'.</msg>
+<status status="PASS" starttime="20230307 09:55:24.307" endtime="20230307 09:55:24.490"/>
 </kw>
-<kw name="Sleep" library="BuiltIn">
-<arg>5s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20230306 15:19:19.444" level="INFO">Slept 5 seconds</msg>
-<status status="PASS" starttime="20230306 15:19:14.443" endtime="20230306 15:19:19.444"/>
+<status status="PASS" starttime="20230307 09:55:24.262" endtime="20230307 09:55:24.490"/>
 </kw>
-<status status="PASS" starttime="20230306 15:19:14.321" endtime="20230306 15:19:19.444"/>
-</kw>
-<kw name="And Input short description" library="add_new_product_keywords">
-<arg>short description</arg>
+<kw name="And Input text area short description" library="add_new_product_keywords">
+<arg>short_description_value</arg>
 <kw name="Element Should Be Visible" library="SeleniumLibrary">
 <arg>${ADD_NEW_PRODUCT.SHORT_DESCRIPTION}</arg>
 <doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<msg timestamp="20230306 15:19:19.475" level="INFO">Element '//textarea[@id='ShortDescription']' is displayed.</msg>
-<status status="PASS" starttime="20230306 15:19:19.445" endtime="20230306 15:19:19.475"/>
+<msg timestamp="20230307 09:55:24.522" level="INFO">Element '//textarea[@id='ShortDescription']' is displayed.</msg>
+<status status="PASS" starttime="20230307 09:55:24.491" endtime="20230307 09:55:24.522"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>${ADD_NEW_PRODUCT.SHORT_DESCRIPTION}</arg>
-<arg>${short_description}</arg>
+<arg>${short_description_value}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20230306 15:19:19.476" level="INFO">Typing text 'short description' into text field '//textarea[@id='ShortDescription']'.</msg>
-<status status="PASS" starttime="20230306 15:19:19.475" endtime="20230306 15:19:19.600"/>
+<msg timestamp="20230307 09:55:24.523" level="INFO">Typing text 'short_description_value' into text field '//textarea[@id='ShortDescription']'.</msg>
+<status status="PASS" starttime="20230307 09:55:24.522" endtime="20230307 09:55:24.668"/>
 </kw>
-<status status="PASS" starttime="20230306 15:19:19.445" endtime="20230306 15:19:19.600"/>
+<status status="PASS" starttime="20230307 09:55:24.491" endtime="20230307 09:55:24.668"/>
 </kw>
-<kw name="And Input Full description" library="add_new_product_keywords">
-<arg>111</arg>
+<kw name="And Input iframe Full description" library="add_new_product_keywords">
+<arg>Full_description_value</arg>
 <kw name="Select Frame" library="SeleniumLibrary">
 <arg>${ADD_NEW_PRODUCT.IFRAME}</arg>
 <doc>Sets frame identified by ``locator`` as the current frame.</doc>
-<msg timestamp="20230306 15:19:19.602" level="INFO">Selecting frame '//iframe[@id='FullDescription_ifr']'.</msg>
-<status status="PASS" starttime="20230306 15:19:19.602" endtime="20230306 15:19:19.639"/>
+<msg timestamp="20230307 09:55:24.670" level="INFO">Selecting frame '//iframe[@id='FullDescription_ifr']'.</msg>
+<status status="PASS" starttime="20230307 09:55:24.670" endtime="20230307 09:55:24.707"/>
 </kw>
 <kw name="Element Should Be Visible" library="SeleniumLibrary">
 <arg>${ADD_NEW_PRODUCT.FULL_DESCRIPTION}</arg>
 <doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<msg timestamp="20230306 15:19:19.670" level="INFO">Element '//body[@data-id='FullDescription']/p' is displayed.</msg>
-<status status="PASS" starttime="20230306 15:19:19.639" endtime="20230306 15:19:19.670"/>
+<msg timestamp="20230307 09:55:24.739" level="INFO">Element '//body[@data-id='FullDescription']/p' is displayed.</msg>
+<status status="PASS" starttime="20230307 09:55:24.707" endtime="20230307 09:55:24.739"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>${ADD_NEW_PRODUCT.FULL_DESCRIPTION}</arg>
-<arg>${Full_description}</arg>
+<arg>${Full_description_value}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20230306 15:19:19.671" level="INFO">Typing text '111' into text field '//body[@data-id='FullDescription']/p'.</msg>
-<status status="PASS" starttime="20230306 15:19:19.670" endtime="20230306 15:19:19.771"/>
+<msg timestamp="20230307 09:55:24.740" level="INFO">Typing text 'Full_description_value' into text field '//body[@data-id='FullDescription']/p'.</msg>
+<status status="PASS" starttime="20230307 09:55:24.739" endtime="20230307 09:55:24.888"/>
 </kw>
 <kw name="Unselect Frame" library="SeleniumLibrary">
 <doc>Sets the main frame as the current frame.</doc>
-<status status="PASS" starttime="20230306 15:19:19.771" endtime="20230306 15:19:19.775"/>
+<status status="PASS" starttime="20230307 09:55:24.889" endtime="20230307 09:55:24.895"/>
 </kw>
-<status status="PASS" starttime="20230306 15:19:19.601" endtime="20230306 15:19:19.775"/>
+<status status="PASS" starttime="20230307 09:55:24.669" endtime="20230307 09:55:24.895"/>
 </kw>
-<kw name="And Input SKU" library="add_new_product_keywords">
-<arg>123</arg>
+<kw name="And Input text field SKU" library="add_new_product_keywords">
+<arg>Sku_value</arg>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${ADD_NEW_PRODUCT.SKU}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20230307 09:55:24.923" level="INFO">Element '(//input[contains(@class,'form-control text-box')])[2]' is displayed.</msg>
+<status status="PASS" starttime="20230307 09:55:24.896" endtime="20230307 09:55:24.923"/>
+</kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>${ADD_NEW_PRODUCT.SKU}</arg>
-<arg>${Full_description}</arg>
+<arg>${Sku_value}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20230306 15:19:19.777" level="INFO">Typing text '123' into text field '(//input[contains(@class,'form-control text-box')])[2]'.</msg>
-<status status="PASS" starttime="20230306 15:19:19.776" endtime="20230306 15:19:19.922"/>
+<msg timestamp="20230307 09:55:24.924" level="INFO">Typing text 'Sku_value' into text field '(//input[contains(@class,'form-control text-box')])[2]'.</msg>
+<status status="PASS" starttime="20230307 09:55:24.924" endtime="20230307 09:55:25.088"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>5s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20230306 15:19:24.922" level="INFO">Slept 5 seconds</msg>
-<status status="PASS" starttime="20230306 15:19:19.922" endtime="20230306 15:19:24.922"/>
+<msg timestamp="20230307 09:55:30.088" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20230307 09:55:25.088" endtime="20230307 09:55:30.088"/>
 </kw>
-<status status="PASS" starttime="20230306 15:19:19.776" endtime="20230306 15:19:24.922"/>
+<status status="PASS" starttime="20230307 09:55:24.896" endtime="20230307 09:55:30.088"/>
 </kw>
-<kw name="And Click checkbox visible" library="add_new_product_keywords">
+<kw name="And input mutiple Categories dropdown list" library="add_new_product_keywords">
+<arg>Computers</arg>
 <kw name="Element Should Be Visible" library="SeleniumLibrary">
-<arg>${ADD_NEW_PRODUCT.CHECKBOX_PUBLISHED}</arg>
+<arg>${ADD_NEW_PRODUCT.INPUT_CATEGORIES}</arg>
 <doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<msg timestamp="20230306 15:19:24.948" level="INFO">Element '//input[@id='Published']' is displayed.</msg>
-<status status="PASS" starttime="20230306 15:19:24.923" endtime="20230306 15:19:24.948"/>
+<msg timestamp="20230307 09:55:30.115" level="INFO">Element '//label[@id='SelectedCategoryIds_label']/parent::div/../following-sibling::div/*/*/input' is displayed.</msg>
+<status status="PASS" starttime="20230307 09:55:30.089" endtime="20230307 09:55:30.115"/>
 </kw>
-<kw name="Select Checkbox" library="SeleniumLibrary">
-<arg>${ADD_NEW_PRODUCT.CHECKBOX_PUBLISHED}</arg>
-<doc>Selects the checkbox identified by ``locator``.</doc>
-<msg timestamp="20230306 15:19:24.948" level="INFO">Selecting checkbox '//input[@id='Published']'.</msg>
-<status status="PASS" starttime="20230306 15:19:24.948" endtime="20230306 15:19:24.985"/>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${ADD_NEW_PRODUCT.INPUT_CATEGORIES}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230307 09:55:30.116" level="INFO">Clicking element '//label[@id='SelectedCategoryIds_label']/parent::div/../following-sibling::div/*/*/input'.</msg>
+<status status="PASS" starttime="20230307 09:55:30.115" endtime="20230307 09:55:30.277"/>
 </kw>
-<kw name="Sleep" library="BuiltIn">
-<arg>5s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20230306 15:19:29.985" level="INFO">Slept 5 seconds</msg>
-<status status="PASS" starttime="20230306 15:19:24.985" endtime="20230306 15:19:29.985"/>
+<kw name="Mouse Over" library="SeleniumLibrary">
+<arg>${ADD_NEW_PRODUCT.DROPDOWN_LIST_CATEGORIES_OPTION}</arg>
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<msg timestamp="20230307 09:55:30.278" level="INFO">Simulating Mouse Over on element 'css=ul#SelectedCategoryIds_listbox&gt;li:nth-of-type(4)'.</msg>
+<status status="PASS" starttime="20230307 09:55:30.277" endtime="20230307 09:55:30.581"/>
 </kw>
-<status status="PASS" starttime="20230306 15:19:24.923" endtime="20230306 15:19:29.985"/>
-</kw>
-<kw name="And Input text GTIN" library="add_new_product_keywords">
-<arg>123</arg>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>${ADD_NEW_PRODUCT.GTIN}</arg>
-<arg>${GTIN_VALUE}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20230306 15:19:29.987" level="INFO">Typing text '123' into text field '//input[@id='Gtin']'.</msg>
-<status status="PASS" starttime="20230306 15:19:29.986" endtime="20230306 15:19:30.129"/>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${ADD_NEW_PRODUCT.DROPDOWN_LIST_CATEGORIES_OPTION}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230307 09:55:30.581" level="INFO">Clicking element 'css=ul#SelectedCategoryIds_listbox&gt;li:nth-of-type(4)'.</msg>
+<status status="PASS" starttime="20230307 09:55:30.581" endtime="20230307 09:55:30.630"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
-<arg>5s</arg>
+<arg>20s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20230306 15:19:35.130" level="INFO">Slept 5 seconds</msg>
-<status status="PASS" starttime="20230306 15:19:30.129" endtime="20230306 15:19:35.130"/>
-</kw>
-<status status="PASS" starttime="20230306 15:19:29.986" endtime="20230306 15:19:35.130"/>
-</kw>
-<kw name="And Input Manufacturer part number" library="add_new_product_keywords">
-<arg>111</arg>
-<kw name="Element Should Be Visible" library="SeleniumLibrary">
-<arg>${ADD_NEW_PRODUCT.MANUFACTURER_PART_NUMBER}</arg>
-<doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<msg timestamp="20230306 15:19:35.157" level="INFO">Element '//input[@id='ManufacturerPartNumber']' is displayed.</msg>
-<status status="PASS" starttime="20230306 15:19:35.131" endtime="20230306 15:19:35.157"/>
-</kw>
-<kw name="Sleep" library="BuiltIn">
-<arg>5s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20230306 15:19:40.157" level="INFO">Slept 5 seconds</msg>
-<status status="PASS" starttime="20230306 15:19:35.157" endtime="20230306 15:19:40.157"/>
-</kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>${ADD_NEW_PRODUCT.MANUFACTURER_PART_NUMBER}</arg>
-<arg>${MANUFACTURER_PART_NUMBER_VALUE}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20230306 15:19:40.157" level="INFO">Typing text '111' into text field '//input[@id='ManufacturerPartNumber']'.</msg>
-<status status="PASS" starttime="20230306 15:19:40.157" endtime="20230306 15:19:40.279"/>
-</kw>
-<status status="PASS" starttime="20230306 15:19:35.131" endtime="20230306 15:19:40.280"/>
-</kw>
-<kw name="And Click checkbox Show on home page and verify order Display" library="add_new_product_keywords">
-<kw name="Element Should Not Be Visible" library="SeleniumLibrary">
-<arg>${ADD_NEW_PRODUCT.DISPLAY_ORDER}</arg>
-<doc>Verifies that the element identified by ``locator`` is NOT visible.</doc>
-<msg timestamp="20230306 15:19:40.296" level="INFO">Element '//div[contains(@class, 'parent-setting-advanced opened')]' did not exist.</msg>
-<status status="PASS" starttime="20230306 15:19:40.281" endtime="20230306 15:19:40.296"/>
-</kw>
-<kw name="Click checkbox Show on home page" library="add_new_product_keywords">
-<kw name="Element Should Be Visible" library="SeleniumLibrary">
-<arg>${ADD_NEW_PRODUCT.SHOW_ON_HOME_PAGE}</arg>
-<doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<msg timestamp="20230306 15:19:40.324" level="INFO">Element '//input[@id='ShowOnHomepage']' is displayed.</msg>
-<status status="PASS" starttime="20230306 15:19:40.296" endtime="20230306 15:19:40.324"/>
-</kw>
-<kw name="Select Checkbox" library="SeleniumLibrary">
-<arg>${ADD_NEW_PRODUCT.SHOW_ON_HOME_PAGE}</arg>
-<doc>Selects the checkbox identified by ``locator``.</doc>
-<msg timestamp="20230306 15:19:40.326" level="INFO">Selecting checkbox '//input[@id='ShowOnHomepage']'.</msg>
-<status status="PASS" starttime="20230306 15:19:40.324" endtime="20230306 15:19:40.417"/>
-</kw>
-<kw name="Sleep" library="BuiltIn">
-<arg>5s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20230306 15:19:45.417" level="INFO">Slept 5 seconds</msg>
-<status status="PASS" starttime="20230306 15:19:40.417" endtime="20230306 15:19:45.417"/>
-</kw>
-<status status="PASS" starttime="20230306 15:19:40.296" endtime="20230306 15:19:45.417"/>
-</kw>
-<kw name="Scroll Element Into View" library="SeleniumLibrary">
-<arg>${ADD_NEW_PRODUCT.DISPLAY_ORDER}</arg>
-<doc>Scrolls the element identified by ``locator`` into view.</doc>
-<status status="PASS" starttime="20230306 15:19:45.417" endtime="20230306 15:19:45.697"/>
+<msg timestamp="20230307 09:55:50.630" level="INFO">Slept 20 seconds</msg>
+<status status="PASS" starttime="20230307 09:55:30.630" endtime="20230307 09:55:50.630"/>
 </kw>
 <kw name="Element Should Be Visible" library="SeleniumLibrary">
-<arg>${ADD_NEW_PRODUCT.DISPLAY_ORDER}</arg>
+<arg>${ADD_NEW_PRODUCT.VERIFY_CATEGORIES_CHECKED}</arg>
 <doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<msg timestamp="20230306 15:19:45.725" level="INFO">Element '//div[contains(@class, 'parent-setting-advanced opened')]' is displayed.</msg>
-<status status="PASS" starttime="20230306 15:19:45.697" endtime="20230306 15:19:45.725"/>
+<msg timestamp="20230307 09:55:50.654" level="INFO">Element '//ul[@id='SelectedCategoryIds_taglist']//span[text()='Computers &gt;&gt; Software']' is displayed.</msg>
+<status status="PASS" starttime="20230307 09:55:50.630" endtime="20230307 09:55:50.654"/>
 </kw>
-<status status="PASS" starttime="20230306 15:19:40.280" endtime="20230306 15:19:45.725"/>
-</kw>
-<kw name="And Select Product type" library="add_new_product_keywords">
-<arg>Simple</arg>
-<kw name="Select From List By Label" library="SeleniumLibrary">
-<arg>${ADD_NEW_PRODUCT.DROPDOWN_LIST_PRODUCT_TYPE}</arg>
-<arg>${product_Type_value}</arg>
-<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
-<msg timestamp="20230306 15:19:45.727" level="INFO">Selecting options from selection list '//select[@id='ProductTypeId']' by label Simple.</msg>
-<status status="PASS" starttime="20230306 15:19:45.727" endtime="20230306 15:19:45.782"/>
-</kw>
-<status status="PASS" starttime="20230306 15:19:45.726" endtime="20230306 15:19:45.782"/>
-</kw>
-<kw name="And Select Product type" library="add_new_product_keywords">
-<arg>Grouped (product with variants)</arg>
-<kw name="Select From List By Label" library="SeleniumLibrary">
-<arg>${ADD_NEW_PRODUCT.DROPDOWN_LIST_PRODUCT_TYPE}</arg>
-<arg>${product_Type_value}</arg>
-<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
-<msg timestamp="20230306 15:19:45.784" level="INFO">Selecting options from selection list '//select[@id='ProductTypeId']' by label Grouped (product with variants).</msg>
-<status status="PASS" starttime="20230306 15:19:45.783" endtime="20230306 15:19:45.880"/>
-</kw>
-<status status="PASS" starttime="20230306 15:19:45.783" endtime="20230306 15:19:45.881"/>
-</kw>
-<kw name="And Select Vendor value" library="add_new_product_keywords">
-<arg>Vendor 1</arg>
-<kw name="Select From List By Label" library="SeleniumLibrary">
-<arg>${ADD_NEW_PRODUCT.VENDOR}</arg>
-<arg>${vendor_value}</arg>
-<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
-<msg timestamp="20230306 15:19:45.882" level="INFO">Selecting options from selection list '//select[@id='VendorId']' by label Vendor 1.</msg>
-<status status="PASS" starttime="20230306 15:19:45.882" endtime="20230306 15:19:45.982"/>
-</kw>
-<status status="PASS" starttime="20230306 15:19:45.881" endtime="20230306 15:19:45.982"/>
-</kw>
-<kw name="And Allow customer reviews" library="add_new_product_keywords">
-<kw name="Select Checkbox" library="SeleniumLibrary">
-<arg>//input[@name='AllowCustomerReviews']</arg>
-<doc>Selects the checkbox identified by ``locator``.</doc>
-<msg timestamp="20230306 15:19:45.984" level="INFO">Selecting checkbox '//input[@name='AllowCustomerReviews']'.</msg>
-<status status="PASS" starttime="20230306 15:19:45.983" endtime="20230306 15:19:46.045"/>
-</kw>
-<status status="PASS" starttime="20230306 15:19:45.983" endtime="20230306 15:19:46.045"/>
+<status status="PASS" starttime="20230307 09:55:30.089" endtime="20230307 09:55:50.654"/>
 </kw>
 <doc>As an admin, I can add a new product and save it</doc>
 <tag>ADD_NEW_PRODUCT1</tag>
 <tag>loginPage</tag>
-<status status="PASS" starttime="20230306 15:18:29.633" endtime="20230306 15:19:46.046"/>
+<status status="PASS" starttime="20230307 09:54:58.702" endtime="20230307 09:55:50.655"/>
 </test>
-<status status="PASS" starttime="20230306 15:18:29.094" endtime="20230306 15:19:46.048"/>
+<status status="PASS" starttime="20230307 09:54:58.267" endtime="20230307 09:55:50.656"/>
 </suite>
 <statistics>
 <total>
